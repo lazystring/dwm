@@ -7,5 +7,8 @@ _Hint_: It has a `Makefile`.
 
 ## Patches
 
-* https://dwm.suckless.org/patches/stacker/dwm-stacker-6.0.diff
-* https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
+* https://dwm.suckless.org/patches/actualfullscreen/
+* https://dwm.suckless.org/patches/attachaside/
+* https://dwm.suckless.org/patches/fullgaps/
+* https://dwm.suckless.org/patches/stacker/
+* https://dwm.suckless.org/patches/xrdb/
