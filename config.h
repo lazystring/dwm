@@ -99,6 +99,7 @@ static Key keys[] = {
 
         { MODKEY,			XK_p,		spawn,          {.v = dmenucmd } },
 	{ MODKEY,			XK_a,		spawn,		SHCMD("$term -e pacmixer") },
+        { MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
