@@ -8,12 +8,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Monaco:size=8" };
 static const char dmenufont[]       = "Monaco:size=8";
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
+static char normbgcolor[]           = "#1D2338";
+static char normbordercolor[]       = "#485665";
+static char normfgcolor[]           = "#D1D7E1";
+static char selfgcolor[]            = "#D1D7E1";
+static char selbordercolor[]        = "#845980";
+static char selbgcolor[]            = "#845980";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -83,11 +83,8 @@ static Key keys[] = {
 	TAGKEYS(			XK_7,		6)
 	TAGKEYS(			XK_8,		7)
 	TAGKEYS(			XK_9,		8)
-
-        // TODO(me): What do these do?
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
-
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("prompt \"Reboot computer?\" \"sudo -A reboot\"") },
 	{ MODKEY,			XK_Tab,		view,		{0} },
 	{ MODKEY,			XK_q,		killclient,	{0} },
@@ -95,11 +92,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_e,		spawn,		SHCMD("emacs") },
 	{ MODKEY,			XK_r,		spawn,		SHCMD("$term -e $FILEMGR") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} },
-
-        // TODO(me): What are these?
 	{ MODKEY,			XK_i,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_i,		incnmaster,     {.i = -1 } },
-
         { MODKEY,			XK_p,		spawn,          {.v = dmenucmd } },
 	{ MODKEY,			XK_a,		spawn,		SHCMD("$term -e pacmixer") },
         { MODKEY,			XK_f,		togglefullscr,	{0} },
@@ -108,8 +102,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY,			XK_x,		spawn,		SHCMD("lock-screen") },
 	{ MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("prompt \"Shutdown computer?\" \"sudo -A shutdown -h now\"") },
-	{ MODKEY,			XK_b,		togglebar,	{0} },
-	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("hover left") },
+	{ MODKEY|ShiftMask,		XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_b,		spawn,		SHCMD("bluetooth") },
         { MODKEY,			XK_n,		spawn,		SHCMD("$BROWSER") },
 	{ MODKEY,			XK_space,	zoom,		{0} },
